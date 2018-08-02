@@ -1,0 +1,73 @@
+
+.phone{
+    background: #bcbcbc;  
+    padding:0 0 50px 15px;
+  span {
+    margin-top: 36px;
+    width: 150px;
+    color: #4f4f4f;
+  }
+  table {
+    width: 100%;
+    ::ng-deep tbody tr:nth-child(odd){
+        background: #eeeeef;
+    }
+    ::ng-deep tbody tr:nth-child(even){
+        background: #d8d8d8;
+    }
+    ::ng-deep thead tr{
+        background: #d8d8d8;
+    }
+  }
+  .margine-top{
+      margin-top: 20px;
+  }
+  ::ng-deep .mat-select-value{
+      text-align: right;
+  }
+  .icons{
+      ::ng-deep mat-icon{
+          display: block;
+          margin: 0 10px 10px;
+          font-size: 25px;
+      }
+      .icons-css{
+        background: #e6e6e6;
+        padding: 5px 10px 9px 7px;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #fff;
+        border-top: 1px solid #fff;
+      }
+  }
+  .btnBlock{
+      display: inline-block;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #fff;
+      border-top: 1px solid #fff;
+    .patientButton{
+        width: 200px;
+        height: 40px;
+        background: #000;
+        border: 5px solid #e6e6e6;
+      }
+  }
+  ::ng-deep mat-grid-tile{
+      padding-top: calc(((38% - 0.5px) * 1) + 0px) !important;
+  }
+  ::ng-deep mat-grid-list{
+    padding-bottom: calc(((1 * ((38% - 0.5px) * 1)) + 0px) + 0px) !important;
+  }
+  ::ng-deep .mat-tab-labels .mat-tab-label.mat-tab-label-active{
+      background: #d8d8d8;
+  }
+  ::ng-deep .mat-tab-labels .mat-tab-label{
+      background: #cfcfcf;
+      margin-right: 7px;
+  }
+  ::ng-deep .mat-tab-header{
+      border-bottom: none;
+  }
+  
+}

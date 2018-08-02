@@ -8,6 +8,10 @@ import {RouterModule, Routes} from '@angular/router';
 import {McBreadcrumbsModule} from 'ngx-breadcrumbs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {MatNativeDateModule, MatSliderModule} from '@angular/material';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTableModule} from '@angular/material/table';
+import { FlexLayoutModule } from "@angular/flex-layout";
 import {
   MatIconModule,
   MatButtonModule,
@@ -63,12 +67,17 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forRoot(routes),
+    FlexLayoutModule,
     BrowserModule,
     MatTabsModule,
+    MatDatepickerModule,
+    MatSliderModule,
+    MatNativeDateModule,
     BrowserAnimationsModule,
     McBreadcrumbsModule.forRoot(),
     MatToolbarModule,
     MatIconModule,
+    MatTableModule,
     MatButtonModule,
     MatSelectModule,
     MatFormFieldModule,

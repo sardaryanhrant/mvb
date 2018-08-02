@@ -1,0 +1,17 @@
+::ng-deep .mat-tab-links{
+    background: #d8d8d8;
+    padding-top: 10px;
+    .mat-tab-link{
+        background: #ccc;
+        margin-right: 15px;
+    }
+    a.mat-tab-label-active.mat-tab-link{
+        background: #bcbcbc;
+        border-bottom: none;
+        z-index: 99;
+        opacity: 1;
+    }
+}
+::ng-deep .mat-tab-nav-bar.mat-primary{
+    border-bottom: none;
+}

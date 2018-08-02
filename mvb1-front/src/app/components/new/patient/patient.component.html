@@ -1,27 +1,204 @@
-<div>
+<div class="phone">
   <form [formGroup]="patientForm">
-    <mat-grid-list cols="2">
-      <mat-form-field>
-        <mat-select forControlName="patientStatus">
-          <mat-option value="active">Active</mat-option>
-          <mat-option value="unavtive">Not Active</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select forControlName="rejection">
-          <mat-option value="active">Active</mat-option>
-          <mat-option value="unavtive">Not Active</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="text" formControlName="insuranceNumber">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select forControlName="gender">
-          <mat-option value="male">Herr</mat-option>
-          <mat-option value="female">Frau</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <mat-grid-list cols="2" rows="1">
+      <mat-grid-tile>
+        <div>
+            <div class="btnBlock">
+                <button class="btn btn-success patientButton"></button>
+              </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Patientenstatus</span>
+            <mat-form-field fxFlex="50">
+              <mat-select forControlName="patientStatus">
+                <mat-option value="active">Active</mat-option>
+                <mat-option value="unavtive">Not Active</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Ablehnungsground</span>
+            <mat-form-field fxFlex="50">
+              <mat-select forControlName="rejection">
+                <mat-option value="active">Active</mat-option>
+                <mat-option value="unavtive">Not Active</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Anrede</span>
+            <mat-form-field fxFlex="50">
+              <input matInput type="text" formControlName="insuranceNumber">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Titel</span>
+            <mat-form-field fxFlex="50">
+              <mat-select forControlName="gender">
+                <mat-option value="male">Herr</mat-option>
+                <mat-option value="female">Frau</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Nachname </span>
+            <mat-form-field class="example-full-width" fxFlex="50">
+              <input matInput placeholder="Mustermann">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Vorname </span>
+            <mat-form-field fxFlex="50" class="example-full-width">
+              <input matInput placeholder="Max">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Geburtsdatum </span>
+            <mat-form-field fxFlex="50">
+              <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Strabe</span>
+            <mat-form-field fxFlex="50" class="example-full-width">
+              <input matInput placeholder="Musterstrabe 1">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">PLZ / Ort</span>
+            <mat-form-field fxFlex="50" class="example-full-width">
+              <input matInput placeholder="Musterstrabe">
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div>
+          <div fxLayout="row">
+            <span fxFlex="50">Neuro Berater</span>
+            <mat-form-field fxFlex="50">
+              <mat-select forControlName="patientStatus">
+                <mat-option value="active">Beraterman</mat-option>
+                <mat-option value="unavtive">Not Active</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Versicherungsstatus</span>
+            <mat-form-field fxFlex="50">
+              <mat-select forControlName="patientStatus">
+                <mat-option value="active">Private</mat-option>
+                <mat-option value="unavtive">Not Active</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50">Krankenkasse</span>
+            <mat-form-field fxFlex="50">
+              <mat-select forControlName="patientStatus">
+                <mat-option value="active">Debeka</mat-option>
+                <mat-option value="unavtive">Not Active</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50" class="margine-top">
+              <mat-icon>phone</mat-icon>
+            </span>
+            <mat-form-field fxFlex="50" class="example-full-width">
+              <input matInput placeholder="0651/123456" type="number">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50" class="margine-top">
+              <mat-icon>phone_iphone</mat-icon>
+            </span>
+            <mat-form-field fxFlex="50" class="example-full-width">
+              <input matInput placeholder="0651/123456" type="number">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50" class="margine-top">
+              <mat-icon>print</mat-icon>
+            </span>
+            <mat-form-field fxFlex="50" class="example-full-width">
+              <input matInput placeholder="0651/123456" type="number">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <span fxFlex="50" class="margine-top">
+              <mat-icon>mail_outline</mat-icon>
+            </span>
+            <mat-form-field fxFlex="50" class="example-full-width">
+              <input matInput placeholder="mustermann@dummy.de" type="email">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <mat-form-field fxFlex="100" class="example-full-width">
+              <textarea matInput placeholder="Bemerkungen"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-grid-tile>
     </mat-grid-list>
+    <div>
+      <mat-tab-group>
+        <mat-tab label="Behandlung">
+          <div fxLayout="row">
+            <div fxFlex="92">
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Anfang </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Ende geplant </th>
+                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+                <ng-container matColumnDef="symbol">
+                  <th mat-header-cell *matHeaderCellDef> Endge </th>
+                  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+                <ng-container matColumnDef="status">
+                  <th mat-header-cell *matHeaderCellDef> Status </th>
+                  <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                </ng-container>
+                <ng-container matColumnDef="angemeldet">
+                  <th mat-header-cell *matHeaderCellDef> Angemeldet </th>
+                  <td mat-cell *matCellDef="let element"> {{element.angemeldet}} </td>
+                </ng-container>
+                <ng-container matColumnDef="strabe">
+                  <th mat-header-cell *matHeaderCellDef> Strabe </th>
+                  <td mat-cell *matCellDef="let element"> {{element.strabe}} </td>
+                </ng-container>
+                <ng-container matColumnDef="plz">
+                  <th mat-header-cell *matHeaderCellDef> PLZ </th>
+                  <td mat-cell *matCellDef="let element"> {{element.plz}} </td>
+                </ng-container>
+                <ng-container matColumnDef="ort">
+                  <th mat-header-cell *matHeaderCellDef> Ort </th>
+                  <td mat-cell *matCellDef="let element"> {{element.ort}} </td>
+                </ng-container>
+                <ng-container matColumnDef="sonstiges">
+                  <th mat-header-cell *matHeaderCellDef> Sonstiges </th>
+                  <td mat-cell *matCellDef="let element"> {{element.sonstiges}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
+            <div fxFlex="8" class="icons">
+              <mat-icon>mail_outline</mat-icon>
+              <mat-icon>recent_actors</mat-icon>
+              <mat-icon class="icons-css">close</mat-icon>
+              <mat-icon class="icons-css">check</mat-icon>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab>
+      </mat-tab-group>
+    </div>
   </form>
 </div>
