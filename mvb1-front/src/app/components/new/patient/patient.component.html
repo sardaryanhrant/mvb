@@ -1,0 +1,27 @@
+<div>
+  <form [formGroup]="patientForm">
+    <mat-grid-list cols="2">
+      <mat-form-field>
+        <mat-select forControlName="patientStatus">
+          <mat-option value="active">Active</mat-option>
+          <mat-option value="unavtive">Not Active</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select forControlName="rejection">
+          <mat-option value="active">Active</mat-option>
+          <mat-option value="unavtive">Not Active</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" formControlName="insuranceNumber">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select forControlName="gender">
+          <mat-option value="male">Herr</mat-option>
+          <mat-option value="female">Frau</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-list>
+  </form>
+</div>
